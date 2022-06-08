@@ -48,11 +48,11 @@
    
    li {
     padding: 5px;
-    list-style: decimal inside none;
+    /* list-style: decimal inside none; */
    }
    
    li:nth-child(odd) {
-    background-color: #f3edfc;
+    background-color: blanchedalmond;
    }
    
    .wrapper {
@@ -80,7 +80,7 @@
     font-size: 120%;
     margin-top: 20px;
     padding-top: 10px;
-    color: gray;
+    color: white;
     border-top: 2px solid #ccc;
    }
    
@@ -93,4 +93,5 @@
 
    .center {
        text-align: center;
+       margin-top: auto;
    }
