@@ -10,12 +10,47 @@
 
 <body>
 
+    <!-- navbar/with timer and high score link, create high scores html -->
+    <div class="scores"><a href="highscores.html"> View High Scores</a></div>
+    <div class="timer">Time: <span id="time">0</span></div>
 
+    <!-- body content type thing -->
+<div class="wrapper">
 
+    <!-- start quiz section -->
+    <div class ="start" id="start-screen">
+          <h1>Clarky's Javascript Coding Quiz</h1>
+        <p>Welcome to my Javascript quiz. Answer these multiple choice
+            questions as best you can. Incorrect answers will incur a 
+            small time penalty. The quiz is over once all questions have
+            have been completed or you have run out of time. Good luck!
+        </p>
+      <button id="start">Start Quiz</button>
+    </div>
 
+    <!-- questions will go here in this template -->
+    <div id="questions" class="hide">
+        <h2 id="question-title"></h2>
+        <div class="choices" id="choices" ></div>
+    </div>
 
+    <!-- highscore/end screen -->
+    <div id="end-screen" class="hide">
+      <h2>Well Done!</h2>
+        <p>Your score is <span id="final-score"></span>.<p>
+          <p>
+        Your Initials: <input type="text" id="initials" max="4">
+        <button id="submit">Submit</button>
+          </p>
+    </div>
+
+    <!-- feedback -->
+    <!-- <div class="feedback hide" id="feedback"></div> -->
     
-    
+
+
+</div>
+ 
 <!-- linked js -->
     <script type="text/javascript" src="/assets/js/script.js"></script>
 </body>
