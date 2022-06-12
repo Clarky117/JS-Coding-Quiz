@@ -2,7 +2,7 @@ body {
     font-family: 'Charis SIL', serif;
     font-family: 'Gentium Plus', serif;
     font-size: 120%;
-    background-image: url('./assets/images/snow.jpg');
+    background-image: url('../images/snow.jpg');
     background-repeat: no-repeat;
     }
    
