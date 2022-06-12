@@ -16,22 +16,20 @@ function printHighscores() {
     }} else {
       let temp = document.getElementById("highscores");
       temp.textContent = "How about you play the quiz?";     
-    }
-     
-       
-   }
+    };
+   };
    
 // clear high scores and refresh current page
 function clearHighscores() {
     localStorage.removeItem("highscores");
     location.reload();
-   }
+   };
    
 // attach clear event to clear score button
    let clearButton = document.getElementById("clear");
    clearButton.addEventListener("click", function(){
     clearHighscores();
-   })
+   });
 
 // last but not least, show ya scores
    printHighscores();

@@ -2,7 +2,7 @@
 
 // question variables
 let currentQuestionIndex = 0;
-let time = questions.length * 10;
+let time = questions.length * 12;
 
 // variables from the DOM
 let questionsEl = document.getElementById("questions");
@@ -12,7 +12,6 @@ let submitBtn = document.getElementById("submit");
 let startBtn = document.getElementById("start");
 let initialsEl = document.getElementById("initials");
 let feedbackEl = document.getElementById("feedback");
-
 
 // function to start the quiz and hide initial screen
 function startQuiz() {
@@ -25,8 +24,7 @@ function startQuiz() {
  }, 1000);
    timerEl.textContent = time;
    getQuestion();
-}
-
+};
 
 // function to pull questions from questions.js
 function getQuestion() {
@@ -37,7 +35,7 @@ function getQuestion() {
    // clear out any old question choices
    while (choicesEl.hasChildNodes()) {
    choicesEl.removeChild(choicesEl.lastChild);
-}
+};
 
    // loop over choices
 for(let ii = 0; ii < currentQuestion.choices.length; ii++){
@@ -47,7 +45,7 @@ for(let ii = 0; ii < currentQuestion.choices.length; ii++){
     
    // display on the page
    choicesEl.appendChild(choiceButton);
-}
+};
 // add event listener to each new choice
 choicesEl.children[0].addEventListener("click", function(event){
    questionClick(choicesEl.children[0]);
@@ -61,8 +59,7 @@ choicesEl.children[2].addEventListener("click", function(event){
 choicesEl.children[3].addEventListener("click", function(event){
    questionClick(choicesEl.children[3]);
 });
-}
-
+};
 
 // check user answer and deduct time if incorrect and display new time if incorrect
 function questionClick(answerChoice) {   
@@ -71,7 +68,7 @@ function questionClick(answerChoice) {
    feedbackEl.textContent = "Incorrect";
 } else{
    feedbackEl.textContent = "Correct";
-}
+};
 
  // let the user know if their answer was correct
  feedbackEl.setAttribute("class", "feedback");
@@ -87,8 +84,7 @@ if(currentQuestionIndex === questions.length)
    quizEnd();
 else
    getQuestion();
-}
-
+};
 
 function quizEnd() {
    // stop timer
@@ -105,8 +101,7 @@ function quizEnd() {
 
    // hide questions section
    questionsEl.setAttribute("class", "hide");
-}
-
+};
 
 // show user relevant time and end quiz if no time available
 function clockTick() {
@@ -114,7 +109,7 @@ function clockTick() {
    timerEl.textContent = time;
 if(time <= 0)
    quizEnd();  
-}
+};
 
 // save high score with initial and validate user entry
 function saveHighscore() {
@@ -143,16 +138,14 @@ if(initials === ""){
    localStorage.setItem("highscores", JSON.stringify(highscores));
    // redirect to next page
    location.href = "highscores.html";
-}
-}
-
+};
+};
 
 // if the user smashes enter, this is the work around
 function checkForEnter(event) {
    if(event.keyCode === 13)
    saveHighscore();
-}
-
+};
 
 submitBtn.onclick = saveHighscore;
 startBtn.onclick = startQuiz;

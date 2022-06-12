@@ -2,34 +2,18 @@
     font-family: 'Charis SIL', serif;
     font-family: 'Gentium Plus', serif;
     font-size: 120%;
-    background-color: grey;
+    background-image: url(/assets/images/snow.jpg);
+    background-repeat: no-repeat;
    }
    
    a {
-    color: #18216B;
+    color:#111;
     text-decoration: none;
     transition: color 0.4s;
    }
    
    a:hover {
-    color: #22705F;
-   }
-   
-   button {
-    display: inline-block;
-    margin: 5px;
-    cursor: pointer;
-    font-size: 100%;
-    background-color: #18216B;
-    border-radius: 5px;
-    padding: 2px 10px;
-    color: white;
-    border: 0;
-    transition: background-color 0.4s;
-   }
-   
-   button:hover {
-    background-color: #22705F;
+    color:#002bff;
    }
    
    .choices button {
@@ -48,7 +32,6 @@
    
    li {
     padding: 5px;
-    /* list-style: decimal inside none; */
    }
    
    li:nth-child(odd) {
@@ -70,21 +53,23 @@
    }
    
    .scores {
+    font-size:larger;   
     position: absolute;
     top: 2rem;
     left: 4rem;
    }
    
    .feedback {
-    font-style: italic;
-    font-size: 120%;
+    color:#111;
+    font-weight: bolder;
+    font-size: 2rem;
     margin-top: 20px;
     padding-top: 10px;
-    color: white;
     border-top: 2px solid #ccc;
    }
    
    .timer {
+    font-size:larger;
     position: absolute;
     top: 2rem;
     right: 4rem;
@@ -95,3 +80,110 @@
        text-align: center;
        margin-top: auto;
    }
+
+
+   /* new button for start quiz */
+   /* credit - https://getcssscan.com/css-buttons-examples?ref=beautifulboxshadow-bottom */
+
+   .button-85 {
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-85:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  @keyframes glowing-button-85 {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .button-85:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+
+
+  /* buttons for quiz and submit */
+
+  button {
+    background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%);
+    border-radius: .5rem;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    font-size: 16px;
+    justify-content: center;
+    padding: 1rem 1.75rem;
+    text-decoration: none;
+    border: 0;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin:5px;
+  }
+  
+  button:hover {
+    background-image: linear-gradient(-180deg, #1D95C9 0%, #17759C 100%);
+  }
+  
+  @media (min-width: 768px) {
+    .button-43 {
+      padding: 1rem 2rem;
+    };
+  }
+
+  /* tweak to submit button */
+
+  .submit{
+      padding: 6px 10px;
+  }
