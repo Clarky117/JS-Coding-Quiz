@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="/assets/css/reset.css"> -->
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,17 +12,16 @@
 </head>
 
 <body>
-<!-- background image -->
+<!-- background image added via css -->
 
-
-    <!-- navbar/with timer and high score link, create high scores html -->
+<!-- navbar/with timer and high score link, create high scores html -->
     <div class="scores"><a href="highscores.html">View High Scores</a></div>
-    <div class="timer">Time: <span id="time">0</span></div>
+    <div class="timer">Time:<span id="time">0</span></div>
 
-    <!-- body content type thing -->
+<!-- body content type thing -->
 <main class="wrapper">
 
-    <!-- start quiz section -->
+<!-- start quiz section -->
     <section class ="start" id="start-screen">
           <h1>Clarky's Javascript Coding Quiz</h1>
         <p>Welcome to my Javascript quiz. Answer these multiple choice
@@ -35,16 +33,15 @@
         <!-- new  better button added, credit in css -->
         <button id="start" class="button-85" role="button">Start Quiz</button>
 
-      <!-- <button id="start">Start Quiz</button> -->
-      </section>
+    </section>
 
-    <!-- questions will go here in this template -->
+<!-- questions will go here in this template -->
     <section id="questions" class="hide">
         <h2 id="question-title"></h2>
         <div class="choices" id="choices" ></div>
     </section>
 
-    <!-- highscore/end screen -->
+<!-- highscore/end screen -->
     <section id="end-screen" class="hide">
       <h2>Well Done!</h2>
         <p>Your score is <span id="final-score"></span>.<p>
@@ -54,7 +51,7 @@
           </p>
         </section>
 
-    <!-- let the user know if answer is correct or not via javascript -->
+<!-- let the user know if answer is correct or not via javascript -->
     <footer class="feedback hide" id="feedback"></footer>
     
   </main>

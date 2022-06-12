@@ -1,5 +1,3 @@
-// logic here
-
 // question variables
 let currentQuestionIndex = 0;
 let time = questions.length * 12;
@@ -18,7 +16,7 @@ function startQuiz() {
    let startScreen = document.getElementById("start-screen");
    startScreen.setAttribute("class", "start hide");
    // show questions and start timer
-   questionsEl.setAttribute("class", " ");
+   questionsEl.setAttribute("class", "");
    timerId = setInterval(function(){
    clockTick();
  }, 1000);
@@ -43,7 +41,7 @@ for(let ii = 0; ii < currentQuestion.choices.length; ii++){
    let choiceButton = document.createElement("button");
    choiceButton.textContent = currentQuestion.choices[ii];
     
-   // display on the page
+// display on the page
    choicesEl.appendChild(choiceButton);
 };
 // add event listener to each new choice
@@ -64,20 +62,20 @@ choicesEl.children[3].addEventListener("click", function(event){
 // check user answer and deduct time if incorrect and display new time if incorrect
 function questionClick(answerChoice) {   
    if(answerChoice.textContent != questions[currentQuestionIndex].answer){
-    time -= 10;
+   time -= 10;
    feedbackEl.textContent = "Incorrect";
 } else{
    feedbackEl.textContent = "Correct";
 };
 
- // let the user know if their answer was correct
+// let the user know if their answer was correct
  feedbackEl.setAttribute("class", "feedback");
  setInterval(function(){
-    feedbackEl.setAttribute("class", "feedback hide");
- }, 1000);
+   feedbackEl.setAttribute("class", "feedback hide");
+}, 1000);
 
- // next question please
- currentQuestionIndex++;
+// next question please
+currentQuestionIndex++;
 
 // if no more questions then end quiz
 if(currentQuestionIndex === questions.length)
@@ -130,13 +128,13 @@ if(initials === ""){
       highscores = [];
    // format new score object for current user
    let newScore = {
-     initials: initials,
-     score: time
+      initials: initials,
+      score: time
    };
    highscores.push(newScore);
    // save to localstorage
    localStorage.setItem("highscores", JSON.stringify(highscores));
-   // redirect to next page
+   // redirect to high scores
    location.href = "highscores.html";
 };
 };

@@ -1,91 +1,89 @@
-   body {
+body {
     font-family: 'Charis SIL', serif;
     font-family: 'Gentium Plus', serif;
     font-size: 120%;
     background-image: url(/assets/images/snow.jpg);
     background-repeat: no-repeat;
-   }
+    }
    
-   a {
+a {
     color:#111;
     text-decoration: none;
     transition: color 0.4s;
-   }
+    }
    
-   a:hover {
+a:hover {
     color:#002bff;
-   }
+    }
    
-   .choices button {
+.choices button {
     display: block;
-   }
+    }
    
-   input[type="text"] {
+input[type="text"] {
     font-size: 100%;
-   }
+    }
    
-   ol {
+ol {
     padding-left: 0px;
     max-height: 400px;
     overflow: auto;
-   }
+    }
    
-   li {
+li {
     padding: 5px;
-   }
+    }
    
-   li:nth-child(odd) {
+li:nth-child(odd) {
     background-color: blanchedalmond;
-   }
+    }
    
-   .wrapper {
+.wrapper {
     margin: 100px auto 0 auto;
     max-width: 600px;
     margin-top: 14rem;
-   }
+    }
    
-   .hide {
+.hide {
     display: none;
-   }
+    }
    
-   .start {
+.start {
     text-align: center;
-   }
+    }
    
-   .scores {
+.scores {
     font-size:larger;   
     position: absolute;
     top: 2rem;
     left: 4rem;
-   }
+    }
    
-   .feedback {
+.feedback {
     color:#111;
     font-weight: bolder;
     font-size: 2rem;
     margin-top: 20px;
     padding-top: 10px;
-    border-top: 2px solid #ccc;
-   }
+    }
    
-   .timer {
+.timer {
     font-size:larger;
     position: absolute;
     top: 2rem;
     right: 4rem;
-   }
+    }
 
-
-   .center {
+.center {
        text-align: center;
        margin-top: auto;
-   }
+    }
 
 
-   /* new button for start quiz */
-   /* credit - https://getcssscan.com/css-buttons-examples?ref=beautifulboxshadow-bottom */
+/* new button for start quiz */
+/* credit - https://getcssscan.com/css-buttons-examples?ref=beautifulboxshadow-bottom */
 
-   .button-85 {
+.button-85 {
     padding: 0.6em 2em;
     border: none;
     outline: none;
@@ -98,9 +96,9 @@
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-  }
+    }
   
-  .button-85:before {
+.button-85:before {
     content: "";
     background: linear-gradient(
       45deg,
@@ -126,9 +124,9 @@
     animation: glowing-button-85 20s linear infinite;
     transition: opacity 0.3s ease-in-out;
     border-radius: 10px;
-  }
+    }
   
-  @keyframes glowing-button-85 {
+@keyframes glowing-button-85 {
     0% {
       background-position: 0 0;
     }
@@ -138,9 +136,9 @@
     100% {
       background-position: 0 0;
     }
-  }
+    }
   
-  .button-85:after {
+.button-85:after {
     z-index: -1;
     content: "";
     position: absolute;
@@ -150,12 +148,12 @@
     left: 0;
     top: 0;
     border-radius: 10px;
-  }
+    }
 
 
-  /* buttons for quiz and submit */
+/* buttons for quiz */
 
-  button {
+button {
     background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%);
     border-radius: .5rem;
     box-sizing: border-box;
@@ -170,20 +168,20 @@
     -webkit-user-select: none;
     touch-action: manipulation;
     margin:5px;
-  }
+    }
   
-  button:hover {
+button:hover {
     background-image: linear-gradient(-180deg, #1D95C9 0%, #17759C 100%);
-  }
+    }
   
-  @media (min-width: 768px) {
+@media (min-width: 768px) {
     .button-43 {
       padding: 1rem 2rem;
     };
-  }
+    }
 
-  /* tweak to submit button */
+/* tweak to submit button */
 
-  .submit{
+.submit{
       padding: 6px 10px;
-  }
+    }
