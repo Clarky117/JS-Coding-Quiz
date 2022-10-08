@@ -1,6 +1,6 @@
 # JS-Coding-Quiz
 
-In week 4 of the UWA coding bootcamp we have been tasked with building from scratch dynamic quiz website using HTML, CSS, and Javascript to showcase the skills we have learnt over the last month.<br><br>
+Built a dynamic quiz website using HTML, CSS, and Javascript.<br><br>
 
 ## Key Points
 
